@@ -6,12 +6,7 @@ relevant new submissions and publishes it to GitHub Pages, where a static front
 end renders it instantly.
 
 - **Live site:** `https://nicolas-garc.github.io/arxiv-observing-log/`
-- **No AI/LLM anywhere.** Scoring is keyword-based and the one-line gloss is
-  *extractive* (it picks the most relevant sentence from the abstract).
-- **Entirely free tier.** GitHub Actions minutes and GitHub Pages are both free
-  for public repositories. There are **no API keys and no paid services**
-  anywhere in this project — the only external call is to the public, free
-  arXiv API.
+
 
 ## How it works
 
