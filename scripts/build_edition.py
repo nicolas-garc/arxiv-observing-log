@@ -278,6 +278,14 @@ def main():
     papers = within_window(papers, WINDOW_HOURS)
     log("%d papers within the last %dh." % (len(papers), WINDOW_HOURS))
 
+    if not papers:
+        # arXiv is quiet (weekend / holiday gap). Don't blank the site — keep the
+        # previous edition so visitors still get a pre-built page. Once built_at
+        # ages past the front end's 36h cutoff it falls back to a live fetch on
+        # its own. This mirrors the network-failure path above.
+        log("no papers in window; preserving previous edition. Exiting cleanly.")
+        return 0
+
     edition = build_edition(papers, keywords)
     strong = sum(1 for p in edition["papers"] if p["score"] >= STRONG_TIER)
     log("built edition: %d papers, %d strong matches." % (len(edition["papers"]), strong))
