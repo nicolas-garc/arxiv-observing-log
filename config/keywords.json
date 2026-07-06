@@ -1,14 +1,24 @@
 {
   "keywords": [
+    "simulation-based inference",
+    "likelihood-free inference",
+    "Bayesian inference",
     "machine learning",
     "deep learning",
-    "neural network",
-    "simulation-based inference",
-    "galaxy morphology",
-    "emulator",
-    "normalizing flow",
-    "graph neural network",
-    "cosmological parameter",
-    "N-body simulation"
+    "cosmological parameter inference",
+    "computational astrophysics",
+    "galaxy formation",
+    "galaxy evolution",
+    "satellite galaxies",
+    "galaxy quenching",
+    "dark matter halos",
+    "hierarchical structure formation",
+    "large-scale structure",
+    "cosmological simulations",
+    "hydrodynamical simulations",
+    "IllustrisTNG",
+    "CAMELS",
+    "N-body simulations",
+    "baryonic feedback"
   ]
 }
