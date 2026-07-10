@@ -287,19 +287,31 @@
     { id: 'astro-ph.IM', label: 'astro-ph.IM · methods', cls: 'c-im' },
   ];
   const DEFAULT_PREFS = {
-    keywords: [
-      'machine learning', 'deep learning', 'neural network',
-      'simulation-based inference', 'galaxy morphology', 'emulator',
-      'normalizing flow', 'graph neural network', 'cosmological parameter',
-      'N-body simulation'
-    ],
+ "keywords": [
+    "galaxy formation", "galaxy evolution", "satellite galaxies",
+    "dwarf galaxies", "dwarf", "Milky Way", "Local Group", "Local Volume",
+    "dark matter halo", "halo", "subhalo", "substructure", "hierarchical",
+    "stellar mass", "stellar populations", "star formation history",
+    "metallicity", "kinematics",
+    "quenching", "quenched", "star formation", "star-forming", "feedback",
+    "AGN feedback", "active galactic nuc", "black hole", "quasar",
+    "environment", "ram pressure", "ram-pressure", "tidal stripping",
+    "stripping", "circumgalactic",
+    "cosmology", "cosmological", "cosmological parameter",
+    "large-scale structure", "power spectrum", "dark matter",
+    "cosmological simulation", "hydrodynamic simulation", "IllustrisTNG",
+    "TNG", "CAMELS", "N-body", "simulation",
+    "time series", "time-series", "light curve", "variability",
+    "machine learning", "simulation-based inference", "emulator",
+    "SAGA", "ELVES survey"
+  ],
     cats: ['astro-ph.GA', 'astro-ph.CO'],
     window: 'edition',
-    mlBoost: true
+    mlBoost: false
   };
   const PREFS_KEY = 'arxiv-finder-prefs-v3';
   const SAVED_KEY = 'arxiv-finder-saved-v3';
-  const TOP_TIER = 5;
+  const TOP_TIER = 4;
 
   let prefs = JSON.parse(JSON.stringify(DEFAULT_PREFS));
   let saved = [];
