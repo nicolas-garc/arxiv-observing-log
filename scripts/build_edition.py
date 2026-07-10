@@ -36,7 +36,7 @@ DATA_DIR = os.path.join(ROOT, "data")
 EDITIONS_DIR = os.path.join(DATA_DIR, "editions")
 LATEST_PATH = os.path.join(DATA_DIR, "latest.json")
 
-CATEGORIES = ["astro-ph.GA", "astro-ph.CO", "astro-ph.IM"]
+CATEGORIES = ["astro-ph.GA", "astro-ph.CO", "astro-ph.IM", "astro-ph.HE"]
 ML_CROSSLISTS = {"cs.LG", "stat.ML", "cs.CV", "cs.AI"}
 
 API_URL = "https://export.arxiv.org/api/query"
