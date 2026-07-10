@@ -40,7 +40,7 @@ CATEGORIES = ["astro-ph.GA", "astro-ph.CO", "astro-ph.IM", "astro-ph.HE"]
 ML_CROSSLISTS = {"cs.LG", "stat.ML", "cs.CV", "cs.AI"}
 
 API_URL = "https://export.arxiv.org/api/query"
-MAX_RESULTS = 200
+MAX_RESULTS = 350
 # Submission window in hours. Defaults to 48h (the nightly cadence); override with
 # ARXIV_WINDOW_HOURS for a wider one-off cut (e.g. seeding, or after a holiday gap).
 try:
