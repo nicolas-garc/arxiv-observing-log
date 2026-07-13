@@ -260,6 +260,27 @@ def write_json(path, obj):
         f.write("\n")
 
 
+def refresh_previous_edition():
+    """
+    No new papers this run (weekend/holiday gap, or a failed fetch). Keep the
+    existing papers but bump built_at to now, so the front end's 36h freshness
+    check doesn't treat a legitimately quiet arXiv day as a stale build and
+    fall back to a live in-browser fetch (which hits arXiv's CORS restriction
+    and fails there).
+    """
+    try:
+        with open(LATEST_PATH, "r", encoding="utf-8") as f:
+            existing = json.load(f)
+    except Exception as e:  # noqa: BLE001
+        log("no previous edition to refresh (%s); nothing to do." % e)
+        return
+    existing["built_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    write_json(LATEST_PATH, existing)
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    write_json(os.path.join(EDITIONS_DIR, today + ".json"), existing)
+    log("refreshed built_at on existing %d papers." % len(existing.get("papers", [])))
+
+
 # --------------------------------------------------------------------------- #
 # Main
 # --------------------------------------------------------------------------- #
@@ -269,7 +290,8 @@ def main():
 
     xml_text = fetch_feed()
     if xml_text is None:
-        log("no data fetched; leaving previous edition untouched. Exiting cleanly.")
+        log("no data fetched; refreshing previous edition's timestamp instead.")
+        refresh_previous_edition()
         return 0
 
     papers = parse_entries(xml_text)
@@ -279,11 +301,12 @@ def main():
     log("%d papers within the last %dh." % (len(papers), WINDOW_HOURS))
 
     if not papers:
-        # arXiv is quiet (weekend / holiday gap). Don't blank the site — keep the
-        # previous edition so visitors still get a pre-built page. Once built_at
-        # ages past the front end's 36h cutoff it falls back to a live fetch on
-        # its own. This mirrors the network-failure path above.
-        log("no papers in window; preserving previous edition. Exiting cleanly.")
+        # arXiv is quiet (weekend / holiday gap). Don't blank the site — keep
+        # showing the same papers, but refresh built_at so the front end's 36h
+        # freshness check keeps treating this as a valid, current edition
+        # instead of falling back to a live in-browser fetch.
+        log("no papers in window; refreshing previous edition's timestamp.")
+        refresh_previous_edition()
         return 0
 
     edition = build_edition(papers, keywords)
