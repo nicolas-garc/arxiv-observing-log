@@ -90,6 +90,14 @@
   }
   .chip button { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 13px; padding: 0; line-height: 1; }
   .chip button:hover, .chip button:focus-visible { color: var(--rose); }
+  .chip.suggest { border-style: dashed; }
+  .chip.suggest button { color: var(--gold); font-weight: 700; }
+  .chip.suggest button:hover, .chip.suggest button:focus-visible { color: var(--green); }
+  .sugg-label {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin: 16px 0 8px;
+  }
+  .sugg-empty { font-size: 12.5px; color: var(--muted); font-style: italic; }
   .add-row { display: flex; gap: 8px; }
   .add-row input {
     flex: 1; background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
@@ -256,6 +264,8 @@
         <input id="kw-input" type="text" placeholder="add a keyword, e.g. normalizing flow" aria-label="Add keyword">
         <button class="btn" id="kw-add">Add</button>
       </div>
+      <p class="sugg-label">Suggested from your reading shelf</p>
+      <div class="chips" id="suggested-chips"></div>
     </div>
   </details>
 
@@ -394,6 +404,105 @@
   function oneLiner(abstract) {
     const first = abstract.split(/(?<=[.!?])\s+/)[0] || abstract;
     return first.length > 180 ? first.slice(0, 177).replace(/\s+\S*$/, '') + '\u2026' : first;
+  }
+
+  // ---- keyword suggestions: learned from the reading shelf (no AI/LLM \u2014 pure
+  // term-frequency over papers you've saved), surfaced for you to approve ----
+  const STOPWORDS = new Set([
+    'a','an','the','of','in','on','at','to','for','and','or','but','with','from',
+    'by','as','is','are','was','were','be','been','being','this','that','these',
+    'those','it','its','we','our','us','their','them','they','which','who','whom',
+    'can','could','may','might','will','would','should','shall','not','no','also',
+    'more','most','such','than','then','so','if','when','while','where','how',
+    'what','why','into','over','under','between','among','both','each','other',
+    'some','any','all','using','used','use','based','present','presented','paper',
+    'study','studies','results','result','show','shows','showing','shown','find',
+    'finds','found','provide','provides','provided','propose','proposes',
+    'proposed','method','methods','approach','work','new','novel','recent',
+    'recently','one','two','three','first','second','high','low','large','small',
+    'well','here','there','however','therefore','thus','moreover','furthermore',
+    'within','across','via','per','upon','due','have','has','had','does','do',
+    'about','after','before','including','include','includes','several','many',
+    'much','very','only','still','yet','without','order','case','cases',
+    'consistent','consistency','constraint','constraints','constrain','constrains',
+    'constrained','information','model','models','modeling','modelling','modeled',
+    'modelled','strongly','weakly','required','require','requires','requiring',
+    'indicate','indicates','indicated','suggest','suggests','suggested',
+    'significant','significantly','similar','similarly','particular',
+    'particularly','general','generally','different','differences','difference',
+    'previous','previously','current','currently','important','importantly',
+    'robust','robustness','derive','derived','deriving','obtain','obtained',
+    'obtaining','reveal','reveals','revealed','demonstrate','demonstrates',
+    'demonstrated','confirm','confirms','confirmed','support','supports',
+    'supported','implication','implications','context','identify','identified',
+    'identifying','identification','sample','samples','data','analysis',
+    'analyze','analyzed','analyzing','measure','measured','measurement',
+    'measurements','value','values','range','level','levels','effect','effects',
+    'role','key','impact','impacts','term','terms','example','examples',
+    'consider','considered','considering','likely','unlikely','given','further',
+    'additional','additionally','combined','combination','compared','comparison',
+    'relative','relatively','possible','possibly'
+  ]);
+  function tokenize(text) {
+    return (text || '').toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').split(/\s+/).filter(Boolean);
+  }
+  function candidateTermsForPaper(p) {
+    const raw = tokenize((p.title || '') + ' ' + (p.abstract || ''));
+    const isGood = (w) => w.length >= 3 && !STOPWORDS.has(w) && !/^\d+$/.test(w);
+    const terms = new Set();
+    raw.forEach((w) => { if (isGood(w)) terms.add(w); });
+    for (let i = 0; i < raw.length - 1; i++) {
+      if (isGood(raw[i]) && isGood(raw[i + 1])) terms.add(raw[i] + ' ' + raw[i + 1]);
+    }
+    return terms;
+  }
+  function computeSuggestions() {
+    if (!saved.length) return [];
+    const savedFreq = new Map();
+    saved.forEach((p) => {
+      candidateTermsForPaper(p).forEach((term) => savedFreq.set(term, (savedFreq.get(term) || 0) + 1));
+    });
+    // How common is each candidate across the whole loaded pool? Generic
+    // academic filler ("consistent", "modelling") shows up nearly everywhere,
+    // so it scores low here; genuinely topical terms are comparatively rare.
+    const poolFreq = new Map();
+    papers.forEach((p) => {
+      candidateTermsForPaper(p).forEach((term) => poolFreq.set(term, (poolFreq.get(term) || 0) + 1));
+    });
+    const existing = prefs.keywords.map((k) => k.toLowerCase());
+    const minSavedFreq = saved.length >= 4 ? 2 : 1;
+    return Array.from(savedFreq.entries())
+      .filter(([, count]) => count >= minSavedFreq)
+      .filter(([term]) => !existing.some((k) => k.includes(term) || term.includes(k)))
+      .map(([term, sCount]) => [term, sCount, sCount / ((poolFreq.get(term) || sCount) + 1)])
+      .sort((a, b) => b[2] - a[2] || b[1] - a[1] || b[0].length - a[0].length)
+      .slice(0, 8)
+      .map(([term]) => term);
+  }
+  function renderSuggestions() {
+    const wrap = $('suggested-chips');
+    if (!saved.length) {
+      wrap.innerHTML = '<span class="sugg-empty">Save a few papers you like and keyword suggestions will appear here.</span>';
+      return;
+    }
+    const suggestions = computeSuggestions();
+    if (!suggestions.length) {
+      wrap.innerHTML = '<span class="sugg-empty">No new suggestions \u2014 your keywords already cover what you\u2019ve been saving.</span>';
+      return;
+    }
+    wrap.innerHTML = suggestions.map((term) =>
+      '<span class="chip suggest">' + esc(term) + '<button data-term="' + esc(term) + '" aria-label="Add ' + esc(term) + ' as a keyword">+</button></span>'
+    ).join('');
+    wrap.querySelectorAll('button').forEach((b) => {
+      b.addEventListener('click', async () => {
+        const term = b.dataset.term;
+        if (!prefs.keywords.some((k) => k.toLowerCase() === term)) {
+          prefs.keywords.push(term);
+          await store.set(PREFS_KEY, prefs);
+          renderChips(); rescoreSort(); render(); renderSuggestions();
+        }
+      });
+    });
   }
 
   // ---- data loading: prebuilt edition first, live arXiv fallback ----
@@ -567,6 +676,7 @@
         }
         await store.set(SAVED_KEY, saved);
         render();
+        renderSuggestions();
       });
     });
   }
@@ -579,7 +689,7 @@
       b.addEventListener('click', async () => {
         prefs.keywords.splice(Number(b.dataset.i), 1);
         await store.set(PREFS_KEY, prefs);
-        renderChips(); rescoreSort(); render();
+        renderChips(); rescoreSort(); render(); renderSuggestions();
       });
     });
   }
@@ -607,7 +717,7 @@
     prefs.keywords.push(v);
     $('kw-input').value = '';
     await store.set(PREFS_KEY, prefs);
-    renderChips(); rescoreSort(); render();
+    renderChips(); rescoreSort(); render(); renderSuggestions();
   }
 
   function scheduleEditionWatch() {
@@ -634,7 +744,7 @@
     $('ml-boost').checked = !!prefs.mlBoost;
     $('days-back').value = String(prefs.window || 'edition');
 
-    renderCats(); renderChips(); render();
+    renderCats(); renderChips(); render(); renderSuggestions();
 
     $('kw-add').addEventListener('click', addKeyword);
     $('kw-input').addEventListener('keydown', e => { if (e.key === 'Enter') addKeyword(); });

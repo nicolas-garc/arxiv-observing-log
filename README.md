@@ -61,6 +61,18 @@ You can also add/remove keywords ad hoc in the browser (they're stored in
 `localStorage` and only affect your own view); `config/keywords.json` is the
 shared default used to build the published edition.
 
+### Keyword suggestions from your reading shelf
+
+The "Interest profile · keywords" panel also suggests new keywords learned
+from the papers you've starred onto your reading shelf. This is **not** an
+AI/LLM call — it's plain term-frequency: it looks at the titles/abstracts of
+papers you've saved, finds terms that show up disproportionately more often
+there than across the rest of the loaded edition, and lists the most
+distinctive ones as one-click "+" chips. Clicking one adds it as a normal
+keyword (same as typing it into the add box); nothing is added automatically.
+All of this runs in your browser against your own `localStorage` reading
+shelf — it isn't sent anywhere.
+
 ## The 3 AM cron — and how to change it
 
 The schedule lives in [`.github/workflows/nightly.yml`](.github/workflows/nightly.yml):
