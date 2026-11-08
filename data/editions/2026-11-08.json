@@ -1,0 +1,290 @@
+{
+  "built_at": "2026-11-08T14:55:23Z",
+  "papers": [
+    {
+      "id": "http://arxiv.org/abs/2611.08223v1",
+      "title": "The box within the Universe: anisotropies in periodic cosmological simulations I. Dark-matter-only simulations",
+      "abstract": "The vast majority of cosmological simulations employ periodic boundary conditions to achieve statistical homogeneity and to mimic the infinite spatial extent of our Universe. In a cubic periodic domain the Green function breaks full rotational invariance and introduces a geometry-induced anisotropy in the gravitational interaction. We quantify how this intrinsic anisotropy affects cosmic structure growth and investigate the extent to which it biases the commonly used large-scale structure and halo-based observables in dark-matter-only simulations. We analyse an ensemble of 498 cosmological dark-matter-only $N$-body simulations in cubic $T^3$ topological manifolds, evolved to $z=0$, spanning box sizes from $L=6.25\\,\\mathrm{Mpc}$ to $L=100\\,\\mathrm{Mpc}$ at fixed mass and force resolution. We compare anisotropy-sensitive statistics across the suite, including the matter power spectrum, halo abundance, merger histories, shapes and alignments, and filament orientations. Finite periodic boundaries imprint orientation-dependent signatures aligned with the box geometry. These signatures propagate beyond the largest modes and can induce systematic shifts in both field-level and halo-level statistics. The detectable effects propagate to scales much smaller than the box size. Our results demonstrate that periodic-box anisotropy is a non-negligible source of systematics for small simulation volumes, including those commonly employed in modern hydrodynamical simulations.",
+      "published": "2026-11-05T16:10:47Z",
+      "authors": [
+        "Gábor Rácz",
+        "Till Sawala"
+      ],
+      "cats": [
+        "astro-ph.CO"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.08223v1",
+      "score": 27,
+      "ai_summary": "The vast majority of cosmological simulations employ periodic boundary conditions to achieve statistical homogeneity and to mimic the infinite spatial extent of our Universe."
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.08332v1",
+      "title": "The complex periodic variability of PKS 0301-243: hints of a supermassive black hole binary candidate",
+      "abstract": "In hierarchical galaxy formation, supermassive black hole binaries are a ubiquitous consequence of frequent galaxy mergers, yet subparsec binaries remain difficult to be confirmed. Periodic flux modulations may arise from the orbital motion of black holes in close binaries, while relativistic jet precession can provide an additional source of periodic variability. Such periodic signatures therefore motivate us to identify close binary candidates. Here, we report an optical periodicity of $269^{+13}_{-14}$ days in both Zwicky Transient Facility g and r bands of the blazar PKS 0301-243, with corrected global significances of $2.75σ$ and $2.18σ$, respectively. This signal persists over 7 cycles across a baseline of ~2000 days. We interpret this period as a possible modulation associated with the orbital motion of a supermassive black hole binary. A longer optical periodicity of $889^{+47}_{-46}$ days is identified in Katzman Automatic Imaging Telescope, with corrected global significance of $1.97σ$. The longer periodicity spans approximately 5 cycles over a baseline of ~4500 days, potentially associated with jet precession. Both periodicities are independently identified using multiple methods. A supermassive black hole binary incorporating a relativistic jet and a circumbinary disc could reproduce the observed light curve ensemble. For a total mass of $10^{8.95} M_\\odot$ and a mass ratio q = 0.1, the derived milli-parsec separation and a short gravitational wave driven coalescence time, $t_c = 1122^{+144}_{-144}$ years, imply that PKS 0301-243 may be a rare source of nano-hertz gravitational waves and a potential multimessenger laboratory for the terminal stages of supermassive black hole coalescence.",
+      "published": "2026-11-05T17:21:25Z",
+      "authors": [
+        "Jintong Wang",
+        "Yunguo Jiang",
+        "Shifeng Huang"
+      ],
+      "cats": [
+        "astro-ph.HE"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.08332v1",
+      "score": 15,
+      "ai_summary": "In hierarchical galaxy formation, supermassive black hole binaries are a ubiquitous consequence of frequent galaxy mergers, yet subparsec binaries remain difficult to be confirmed."
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.08115v1",
+      "title": "Octavius: A High-Performance Analysis Toolkit for Galaxy Simulations",
+      "abstract": "Increased computing power and more efficient codes have allowed cosmological simulations of galaxy formation to grow massively in scale: the analysis of their outputs has consequently become a big data computational challenge. We present Octavius, a high-performance, hybrid-parallel simulation analysis toolkit. Octavius ingests a simulation snapshot with associated halo catalogue, locates galaxies with a 6D friends-of-friends algorithm, then produces an HDF5 catalogue of properties for haloes, subhaloes, and galaxies. The analysis is fast and memory efficient: we compare the performance against the widely used predecessor toolkit, Caesar, and show Octavius delivers order-of-magnitude improvements in speed with a factor of >5 reduction in peak memory. We demonstrate near-linear strong scaling of compute and linear peak memory scaling with the number of halo-assigned particles. Compute times scale with the superlinear computational load of larger haloes; we note the pipeline is presently I/O-limited. The code is written in Python and uses a declarative, plugin-based architecture so as to be easily extensible. Octavius can currently analyse SIMBA, SWIFT-KIARA, SWIFT-EAGLE, SWIFT-COLIBRE, and TNG snapshots; AHF, HBT-HERONS, and SUBFIND halo catalogues are supported. Properties computed include masses, galaxy photometry with dust attenuation, and kinematic, radial, morphological, and virial quantities. Output catalogues are easily accessed through a provided user API. The code is open sourced at https://github.com/jp-duminy/octavius",
+      "published": "2026-11-05T14:48:46Z",
+      "authors": [
+        "Jean-Paul Duminy",
+        "Jakub Szpila",
+        "Romeel Davé"
+      ],
+      "cats": [
+        "astro-ph.GA",
+        "astro-ph.IM"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.08115v1",
+      "score": 15,
+      "ai_summary": "Octavius ingests a simulation snapshot with associated halo catalogue, locates galaxies with a 6D friends-of-friends algorithm, then produces an HDF5 catalogue of properties for haloes, subhaloes,…"
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.08481v1",
+      "title": "Joint analysis of the Macquart relation and the dispersion measure power spectrum: cross-covariance and redshift self-calibration",
+      "abstract": "The dispersion measures (DMs) of fast radio bursts (FRBs) trace ionised baryons along the line of sight, probing baryonic feedback. Two complementary observables can be constructed from an FRB catalogue: the DM-redshift (Macquart) relation of host-identified FRBs, and the angular power spectrum of the DM field of the full catalogue. Their joint analysis requires their cross-covariance. We derive it within the halo model and show it is a super-sample effect: only the monopole of an individual DM correlates with the angular power spectrum, yielding an exact, model-independent bound on the correlation coefficient. We validate the calculation against log-normal forward simulations of $10^4$ FRBs. For individual DMs, the correlation with the bandpowers is at the per cent level. Neglecting the cross-covariance changes the width of the $χ^2$ distribution by only 0.8 per cent, so the two observables can be treated as effectively independent for wide-area surveys. In a joint forecast with an LSST-like weak lensing survey, adding the Macquart relation tightens constraints on the physical baryon density by 32 per cent and on the mean host contribution by a factor of 4.1, while improving baryonification parameters by only about 5 per cent, indirectly through the host contribution. Finally, we show that the redshift distribution of FRBs without identified hosts, which enters every DM power spectrum, can be reconstructed by inverting their DMs with the jointly fitted mean relation without biasing the inferred parameters, whereas a 20 per cent error in the mean relation biases the DM power spectrum by up to 2$σ$ per band for $5\\times 10^5$ FRBs.",
+      "published": "2026-11-05T18:59:19Z",
+      "authors": [
+        "Amy Wayland",
+        "Robert Reischke"
+      ],
+      "cats": [
+        "astro-ph.CO"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.08481v1",
+      "score": 10,
+      "ai_summary": "We derive it within the halo model and show it is a super-sample effect: only the monopole of an individual DM correlates with the angular power spectrum, yielding an exact, model-independent…"
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.08346v1",
+      "title": "The cold substellar frontier in JWST Extragalactic surveys: a robust parallax measurement yields the most distant known ultra-cold Y dwarf",
+      "abstract": "We present an analysis of JADES-GS-BD-5, an extremely cold Y dwarf identified in the JADES/GOODS-South field. Using multi-epoch JWST/NIRCam imaging spanning a $\\simeq2$-yr baseline, we calibrate the JWST astrometry and obtain the first robust parallax measurement for a brown dwarf discovered in a JWST extragalactic deep field. We measure a proper motion of $μ_{\\rm tot}=49.8^{+0.3}_{-0.3}$ mas yr$^{-1}$ and a parallax of $\\varpi=15.7^{+1.4}_{-1.3}$ mas, corresponding to a geometric distance of $d=64^{+6}_{-5}$ pc, $\\sim3\\times$ further than that of the previously known most distant Y dwarfs with parallax-measured distances. We hence determine a tangential velocity of $v_{\\rm tan}=15.0^{+1.4}_{-1.3}$ km s$^{-1}$, consistent with a Galactic thin-disk object. We find no evidence for binary acceleration, significant photometric variability, or a plausible host. The $J$-band spectral morphology of JADES-GS-BD-5 is consistent with existing Y-dwarf templates, while its extremely faint luminosity and overall near-infrared spectral profile confirm that it is one of the coldest dwarfs discovered to date. We therefore adopt a classification of $>$Y1, consistent with a NIRCam colour-based proxy of cY1.5. The robust parallax-determined distance allows us to determine its bolometric luminosity, $\\log(L_{\\rm bol}/L_{\\odot})=-7.08^{+0.09}_{-0.09}$. Evolutionary modelling places JADES-GS-BD-5 in the planetary-mass regime and makes it a rare benchmark for the study of cold giant-planet atmospheres. Current atmospheric models fail to reproduce its SED in detail, pointing to the importance of disequilibrium chemistry and vertical mixing. Finally, we also report additional proper motion measurements for eight of the other nine known JADES Y-dwarf candidates, highlighting JWST extragalactic surveys as a powerful route to building a statistically useful, parallax-calibrated sample of Y dwarfs.",
+      "published": "2026-11-05T17:31:30Z",
+      "authors": [
+        "Feng-Yuan Frey Liu",
+        "Derek J. McLeod",
+        "Xueqing Chen",
+        "Ben J. Sutlieff",
+        "Ho-Hin Leung",
+        "Clémence Fontanive",
+        "James S. Dunlop",
+        "Ross J. McLure",
+        "Trent J. Dupuy",
+        "Adam C. Carnall",
+        "Thomas M. Stanton",
+        "Beth A. Biller",
+        "Isaac J. B. Holst",
+        "Callum T. Donnan",
+        "Ryan Begley"
+      ],
+      "cats": [
+        "astro-ph.SR",
+        "astro-ph.EP",
+        "astro-ph.GA"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.08346v1",
+      "score": 8,
+      "ai_summary": "The $J$-band spectral morphology of JADES-GS-BD-5 is consistent with existing Y-dwarf templates, while its extremely faint luminosity and overall near-infrared spectral profile confirm that it is…"
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.08422v1",
+      "title": "Torsion talks only to spin: the CMB temperature as a test of energy exchange in Einstein-Cartan cosmology",
+      "abstract": "The cosmic microwave background temperature at $z=0.886$ is known to $2\\%$ from molecular absorption towards PKS~1830$-$211; CO absorbers and Sunyaev-Zel'dovich clusters extend the measurement to $z\\simeq3$. We use them on a question that cosmologies with torsion leave open. When the geometry exchanges energy with several matter components, which of them receives it? In Einstein-Cartan theory the Noether identities of each sector fix the answer. A sector's energy-momentum fails to be conserved only in proportion to its own spin, so minimally coupled light, which has none, is conserved whatever the torsion does. A metric-affine cosmology fitted to DESI DR2 distributes the exchange ``universally'' among all fluids, radiation included; the photons then gain almost a third of their energy. If the photons stay a blackbody, as FIRAS requires of any source set by local conditions, the model predicts a background colder than $T_{0}(1+z)$ by $7\\%$ at $z\\simeq0.9$ and by $8.5\\%$ at $z\\gtrsim3$, with no free parameter. PKS~1830$-$211 gives $5.08\\pm0.10\\,\\mathrm{K}$ against a predicted $4.78\\,\\mathrm{K}$; with the CO absorbers it favours the standard scaling by $Δχ^{2}=13$, and 18 Planck cluster bins give $χ^{2}=50.8$ versus $15.5$. Under the same reading the primary anisotropies would change their spectral shape by amounts Planck excludes. If dark matter carries the spin instead, $H(z)$ moves by less than $10^{-4}$ below $z=3$ at the fitted parameters and $T(z)$ is standard again.",
+      "published": "2026-11-05T18:19:36Z",
+      "authors": [
+        "Fernando Izaurieta",
+        "Samuel Lepe",
+        "Cristian Quinzacara"
+      ],
+      "cats": [
+        "gr-qc",
+        "astro-ph.CO"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.08422v1",
+      "score": 6,
+      "ai_summary": "A metric-affine cosmology fitted to DESI DR2 distributes the exchange ``universally'' among all fluids, radiation included; the photons then gain almost a third of their energy."
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.08336v1",
+      "title": "SDSS-V LVM: Spatial Resolution Effects on Diagnostic Diagrams in the Magellanic Clouds",
+      "abstract": "We investigate how spatial resolution affects emission-line diagnostics in the interstellar medium (ISM) of the Small and Large Magellanic Clouds (SMC and LMC) using SDSS Local Volume Mapper (LVM) data obtained at and degraded to 19, 42, 170 pc (for the SMC) and 17, 68, 272 pc (for the LMC), respectively. We compare the distributions of strong emission-line ratios through 1D and 2D Kolmogorov Smirnov tests. We deduced that diagnostics involving ionization and density sensitive ratios such as [OIII]λ5007/H\\b{eta}, [SII]λλ6717+6731/Hα and [NII]λ6584/Hα are the most strongly impacted by resolution loss in this order. The SMC shows significant deviations even from intermediate scales (42 pc), whereas for the LMC, the coarsest resolution (272 pc) remains relatively stable, indicating that the SMC is intrinsically more affected by spatial mixing. Resolution degradation produces a marked homogenization effect: extreme values present at the finest scales are progressively diluted, causing diagnostic diagrams to converge toward their mean loci. Diffuse ionized gas is particularly sensitive to this mixing, while Hα selected ionized regions exhibit more robust behavior across resolutions. The sensitivity of diagnostic diagrams involving emission-line ratios, equivalent widths, and kinematic properties varies with both spatial resolution and galaxy, with the SMC generally showing stronger changes than the LMC. Our results demonstrate that sub-50 pc resolution is required to resolve the detailed structure of low-metallicity galaxies, and they highlight at least the need for careful interpretation of line-ratio diagnostics in extragalactic studies where coarse spatial resolution is unavoidable.",
+      "published": "2026-11-05T17:23:53Z",
+      "authors": [
+        "A. Z. Lugo-Aranda",
+        "Lesly C. Castañeda",
+        "H. J. Ibarra-Medel",
+        "C. Román-Zúñiga",
+        "J. E. Méndez-Delgado",
+        "Sebastián F. Sánchez",
+        "Rodolfo de J. Zermeño",
+        "Mónica A. Villa-Durango",
+        "Irene Cruz-González",
+        "Aida Wofford",
+        "Oskar Aranguré",
+        "G. A. Blanc",
+        "Priyanka Chakraborty",
+        "Evgeniya Egorova",
+        "Oleg V. Egorov",
+        "Thomas Hilder",
+        "Evelyn J. Johnston",
+        "Amy M. Jones",
+        "P. Jiménez-Hernández",
+        "K. Kreckel",
+        "Alfredo J. Mejía-Narváez",
+        "Christophe Morisset",
+        "Rogelio Orozco-Duarte",
+        "Alexandre Roman-Lopes",
+        "José G. Fernández-Trincado"
+      ],
+      "cats": [
+        "astro-ph.GA"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.08336v1",
+      "score": 2
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.08489v1",
+      "title": "BeAR: The Bern Atmospheric Retrieval code - A GPU-accelerated framework for low-resolution, high-resolution, and joint retrievals of exoplanet atmospheres",
+      "abstract": "We present BeAR, the Bern Atmospheric Retrieval code and successor of Helios-r, and its new high-resolution cross-correlation framework for emission and transmission spectra. BeAR performs joint retrievals by adding the log-likelihoods of high- and low-resolution data computed from the same model atmosphere. The framework implements established cross-correlation log-likelihoods, with the line-depth scaling either fitted analytically or sampled as a free parameter, their per-pixel generalization, fast model filtering, and model re-injection adapted to this filtering. The forward model and likelihood run entirely on a graphics processing unit (GPU). One forward model takes about 1 ms on an NVIDIA GH200, allowing millions of models per minute on a GPU cluster. In separate retrievals of Gemini South/IGRINS and JWST/NIRSpec dayside spectra of the hot Jupiter WASP-77Ab, BeAR reproduces published abundances, C/O ratios, and metallicities to within 1.5 sigma, the preference for 13CO, and the thermal structure and line contrast to within 1 sigma. The joint retrieval confirms a sub-solar metallicity and a near-solar C/O ratio. A full IGRINS retrieval with 17 free parameters takes 27 to 42 minutes on a single NVIDIA GeForce RTX 5080 or about 14 minutes on eight RTX 4090 GPUs. Injection--recovery tests show that the posteriors underestimate the uncertainties of abundance ratios by about a factor of two.",
+      "published": "2026-11-05T18:59:48Z",
+      "authors": [
+        "Esther Wang",
+        "Daniel Kitzmann",
+        "H. Jens Hoeijmakers",
+        "Joost P. Wardenier",
+        "Helena Lecoq-Molinos"
+      ],
+      "cats": [
+        "astro-ph.EP",
+        "astro-ph.IM"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.08489v1",
+      "score": 1
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.08410v1",
+      "title": "Tensor Networks for Block Adaptive Thermal Radiation Transport",
+      "abstract": "Thermal radiation transport (TRT) is computationally challenging because the photon specific intensity depends simultaneously on space, angle, and frequency, producing a high-dimensional state space whose cost grows rapidly with resolution. Tensor-network methods, such as the tensor train (TT) decomposition, can mitigate this curse of dimensionality when the solution admits low-rank structure, but localized nonseparable structure can drive substantial rank growth. Adaptive mesh refinement (AMR) provides a complementary means of making high spatial resolution tractable by concentrating resolution on features of interest that would otherwise be prohibitively expensive to resolve. When tensor representations are constructed locally on AMR blocks, this decomposition offers an additional advantage: nonseparable structure can remain confined to the blocks in which it occurs rather than driving rank growth throughout the domain. This paper introduces a framework for combining block-adaptive mesh refinement with block-local tensor-train representations of the photon specific intensity. The approach couples spatial adaptivity with localized low-rank compression, allowing fine-scale features to be resolved while limiting the impact of locally complex structure on tensor ranks elsewhere in the domain. We develop conservative ghost-cell transfer, coarse-fine flux correction, and refinement criteria that balance spatial discretization and tensor-rounding errors. Numerical experiments demonstrate that the method preserves low-rank structure across much of the domain while resolving localized features with AMR, achieving compression factors exceeding $\\sim$10$^3$. The resulting framework provides a practical foundation for applying tensor-network methods to high-dimensional TRT on the multiscale, adaptively refined meshes encountered in radiation hydrodynamics simulations.",
+      "published": "2026-11-05T18:16:16Z",
+      "authors": [
+        "Alex A. Gorodetsky",
+        "Patrick D. Mullen",
+        "Aditya S. Deshpande",
+        "Joshua C. Dolence",
+        "Chad D. Meyer",
+        "Jonah M. Miller",
+        "Luke F. Roberts"
+      ],
+      "cats": [
+        "astro-ph.IM"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.08410v1",
+      "score": 1
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.08300v1",
+      "title": "Polarization cross-talk from non-stationary sources of image jitter",
+      "abstract": "We generalize a previous formulation for the estimation of polarization cross-talk induced by atmospheric seeing to the case of image jitter that must be described as a non-stationary, and generally non-isotropic, random process. We demonstrate how the newly derived formalism converges towards the previous one in the limit of stationary random image jitter. In the case of non-stationary processes, we compare the predictions of the two formalisms, and illustrate the salient differences. For the sake of demonstration, we adopt for our analysis a specific example of power-spectral density derived from a circulant auto-correlation function, which describes a class of stationary random processes periodic over the length of the time series, and which we successively modified by the insertion of off-diagonal power spectral features at different frequencies in order to test the extended modeling framework for the estimation of polarization cross-talk.",
+      "published": "2026-11-05T17:02:15Z",
+      "authors": [
+        "R. Casini",
+        "A. G. de Wijn"
+      ],
+      "cats": [
+        "astro-ph.IM",
+        "astro-ph.SR"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.08300v1",
+      "score": 1
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.08282v1",
+      "title": "Mitigating scanning-induced systematics in Hipparcos and implications for Gaia astrometry",
+      "abstract": "Space-based astrometric missions such as Hipparcos and Gaia rely on one-dimensional scanning strategies that couple the measured signals with both observation times and scanning geometry. This coupling can introduce spurious periodicities and complicate their interpretation. We present a non-parametric extension of the phase-distance correlation (PDC) periodogram that quantifies and reduces dependence on scan geometry at the period-search stage. Using Hipparcos data, we identified recurrent periodicities associated with characteristic scanning-law timescales and showed that they are strongly suppressed by the scan-angle-controlled statistic. We then applied the method to Gaia Data Release 4 (DR4) prerelease epoch astrometry, where a recurrent ~54-day feature is suppressed across multiple sources while independently known orbital signals remain detectable. The method provides a diagnostic of scan-angle dependence and a way to mitigate its impact on period searches. These results are particularly relevant for Gaia DR4, where public epoch astrometry will enable large-scale searches for companions ranging from exoplanets to dormant black holes.",
+      "published": "2026-11-05T16:47:38Z",
+      "authors": [
+        "Avraham Binnenfeld",
+        "Sahar Shahaf",
+        "Richard I. Anderson",
+        "Hans-Walter Rix",
+        "Shay Zucker"
+      ],
+      "cats": [
+        "astro-ph.IM",
+        "astro-ph.EP",
+        "astro-ph.GA"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.08282v1",
+      "score": 1
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.08221v1",
+      "title": "DIS-secting the universe with high-energy neutrinos",
+      "abstract": "We revisit the impact of electroweak (EW) radiative corrections on the kinematic distributions of charged leptons in neutrino-induced charged-current (CC) deep inelastic scattering (DIS). These corrections are particularly relevant for observables sensitive to collinear photon radiation, such as the energy spectrum of high-energy muons detected in neutrino telescopes. To study these effects, we implement full next-to-leading order (NLO) EW corrections to CC DIS in a flexible Monte Carlo framework, supplemented with higher-order logarithmically enhanced final-state QED radiation and coherent scattering contributions. We compare our results to exclusive NLO QCD plus parton shower (PS) predictions obtained with an existing $\\texttt{POWHEG-BOX}$ event generator, examining different PS models and settings. Based on this comparison, we provide recommendations for the use of the $\\texttt{POWHEG-BOX}$ event generator in experimental analyses. We further assess the impact of radiative corrections on the correlation between the observed muon energy and the incoming neutrino energy, and on the mean inelasticity averaged over a realistic neutrino flux. These corrections can exceed $10\\%$, and above about $10^4\\,{\\rm GeV}$ they receive sizeable contributions from photon-initiated and coherent $W$-boson production, which are not included in the event generator.",
+      "published": "2026-11-05T16:09:18Z",
+      "authors": [
+        "Rhorry Gauld",
+        "Lorenzo Guerra",
+        "Ulrich Haisch",
+        "Alessio Vorona"
+      ],
+      "cats": [
+        "hep-ph",
+        "astro-ph.HE"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.08221v1",
+      "score": 0
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.08197v1",
+      "title": "Rotational Excitation of HC$_5$NH$^+$ by He: Collision Dynamics and Astrophysical Applications",
+      "abstract": "Reliable collisional rate coefficients are crucial for interpreting the rotational emission spectra of molecules in interstellar clouds. In this work, we construct a two-dimensional potential energy surface (PES) for the $\\mathrm{HC}_5\\mathrm{NH}^+$--He system at the CCSD(T)-F12B/cc-pVTZ-F12 level of theory. Rotationally inelastic cross sections are calculated using the quantum close-coupling (CC) method, and the corresponding collisional rate coefficients are obtained by thermal averaging over a Maxwell--Boltzmann distribution. We use these collisional data in a non-local thermodynamic equilibrium (non-LTE) radiative transfer model to investigate the excitation of $\\mathrm{HC}_5\\mathrm{NH}^+$ in the cold dark cloud TMC-1. A global $χ^2$ minimization analysis of seven observed lines yields best-fitting values of $n(\\mathrm{H}_2)=1.63\\times10^{5}$\\,cm$^{-3}$ and $N(\\mathrm{H}_2)=5.09\\times10^{11}$\\,cm$^{-2}$, with reduced $χ^2_{\\min}=0.87$. The modelled line intensities are in good agreement with the observations. These results provide insight into the collisional excitation and radiative properties of $\\mathrm{HC}_5\\mathrm{NH}^+$ under the physical conditions prevailing in TMC-1.",
+      "published": "2026-11-05T15:51:49Z",
+      "authors": [
+        "Ziyu Xiang",
+        "Liman Tian",
+        "Tong Sun",
+        "Wenli Zou",
+        "Xiaolin Chen"
+      ],
+      "cats": [
+        "astro-ph.GA"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.08197v1",
+      "score": 0
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.08181v1",
+      "title": "G92.4+5.0: A Perseus Arm superbubble associated with the H II region CTB 102",
+      "abstract": "Superbubbles are vast hot cavities carved out by the stellar winds and supernovae of clusters of high-mass stars. We investigate G92.4+5.0 (the CTB 102 superbubble), a Perseus Arm superbubble associated with the HII region CTB 102. We use new and archival radio observations (total intensity, rotation measure, and HI spectral line) from the Dominion Radio Astrophysical Observatory Synthesis Telescope, combined with single-antenna data from the Effelsberg Medium Latitude Survey, the Global Magneto-Ionic Medium Survey, and the HI4PI survey to provide data on large structures. The upper region of the superbubble is faint in HI. In order to detect its full extent, we supplement our observations with H-alpha data from the Wisconsin H-Alpha Mapper Survey and the Ziegenbalg Survey, and observe H-alpha emission in the upper region. We measure the CTB 102 superbubble to be at least ~170 pc wide and ~420 pc tall, with an expansion rate of ~12 km/s in the lower regions of the superbubble and ~22.5 km/s in the upper regions. The elongated structure and increasing expansion rate with height are consistent with the evolutionary properties of a superbubble described by the Kompaneets model. We fit the Kompaneets model to the CTB 102 superbubble and obtain an estimated age of 1-6 Myr. This supports a possible scenario in which the stellar cluster currently ionizing CTB 102 is the expansion energy source for the superbubble. Alternatively, if the superbubble expanded under the power of a previous generation of stars, the current CTB 102 stellar cluster may have formed in the walls of the superbubble.",
+      "published": "2026-11-05T15:35:37Z",
+      "authors": [
+        "Rebecca A. Booth",
+        "Jo-Anne Brown",
+        "Tom Landecker",
+        "Roland Kothes",
+        "Tyler Foster",
+        "Anna Ordog",
+        "Alex Schwaner Hill"
+      ],
+      "cats": [
+        "astro-ph.GA"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.08181v1",
+      "score": 0
+    }
+  ]
+}
