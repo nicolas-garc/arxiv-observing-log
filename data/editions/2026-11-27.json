@@ -1,0 +1,74 @@
+{
+  "built_at": "2026-11-27T17:59:31Z",
+  "papers": [
+    {
+      "id": "http://arxiv.org/abs/2611.34890v1",
+      "title": "The Splash population confined to the Milky Way bar region",
+      "abstract": "We investigate the chemo-dynamical properties of in-situ stars in the Galactic bar region (central $5$ kpc), specifically the inner Galactic counterpart of the solar-neighbourhood Splash population (in situ halo). We use a sample of APOGEE DR17 red giants with Gaia astrometry and AstroNN distances, and separate bulge/bar stellar populations dynamically using a normalised time-averaged bar-frame angular momentum, $\\mathcal{V}_φ$. Chemo-dynamical maps in the $\\mathcal{V}_φ$-[Fe/H] plane reveal a pronounced extension of the bar population towards $\\mathcal{V}_φ<0$ (non-bar-following orbits) within $-1.0<{\\rm [Fe/H]}<-0.3$, characterised by high eccentricities, large $z_{\\rm max}$ and an extended spheroidal orbit density distribution, and accounting for $\\sim 30\\%$ of all stars at these metallicities. These $\\mathcal{V}_φ<0$ stars have [Mg/Fe] and [Al/Fe] abundances similar to those of stars on ${\\rm x_1}$ orbits at the same [Fe/H], and they match the solar-neighbourhood Splash in its metallicity and abundance ratio distributions. We therefore refer to them as the $\\textit{central Splash}$. The presence of a significant central Splash underscores the role of the Gaia-Sausage-Enceladus merger in the early history of the Galaxy. We find a similar, weaker extension in the $\\mathcal{V}_φ$-[Fe/H] maps for extremely metal-rich stars, which are confined to the bulge. At metallicities [Fe/H] $<0.3$, we find no additional classical bulge population in these maps beyond the central Splash and proto-Galactic populations $-$ the high-$α$ bulge appears to have evolved from the early high-$α$ disc.",
+      "published": "2026-11-25T18:46:15Z",
+      "authors": [
+        "Aakash Pandey",
+        "Ortwin Gerhard"
+      ],
+      "cats": [
+        "astro-ph.GA",
+        "astro-ph.SR"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.34890v1",
+      "score": 7,
+      "ai_summary": "We investigate the chemo-dynamical properties of in-situ stars in the Galactic bar region (central $5$ kpc), specifically the inner Galactic counterpart of the solar-neighbourhood Splash…"
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.34817v1",
+      "title": "Azimuth Pointing and Momentum Management for a Lightweight High-Altitude Balloon Payload",
+      "abstract": "The ALTAIR (Airborne Laser for Telescopic Atmospheric Interference Reduction) project provides photometric calibration for ground-based telescopes by flying an integrating sphere as an artificial star-like calibration source on a high-altitude balloon. Because the angular distribution of light from the exit port of the sphere is approximately Lambertian, the payload must keep its azimuth within $\\pm8^\\circ$ of the telescope line of sight. This condition bounds the fractional difference in light intensity from that along the exit-port normal to below 1%. The bound must be held for at least 30 s at a time. This paper presents a pointing architecture that combines passive stabilization, onboard attitude determination, and active azimuth control using a momentum wheel, with active desaturation through a second motor at the flight-train pivot. Carbon-fiber inertial booms reduce off-axis pendulating motion sufficiently for azimuth control to be treated independently. Attitude is determined by onboard fusion of rate gyro, accelerometer, magnetometer, and dual-antenna GNSS carrier-phase measurements. A high-fidelity simulation of the payload, including motor dynamics and limits, sensor noise, and wind disturbances generated from flight data, is used to size actuators and tune the control loops. The payload avionics, flight software, power management, controls, and real-time ground telemetry systems are developed in-house. The system is evaluated through ground testing, simulation, and two flights. With the momentum wheel alone, 53 intervals of 30 s pointing within $\\pm8^\\circ$ of the target azimuth are recorded during ascent, with a root-mean-square error (RMSE) of $3.7^\\circ$, and the longest uninterrupted window lasts 7 min 55 s with $5^\\circ$ of pointing RMSE. Simulation results suggest significant performance improvements from adding a pivot motor for momentum management.",
+      "published": "2026-11-25T18:02:05Z",
+      "authors": [
+        "Yorgo Abou Haidar",
+        "James Richard Forbes",
+        "Andrew Higgins",
+        "Benedetto D'Agnillo",
+        "Justin Albert"
+      ],
+      "cats": [
+        "eess.SY",
+        "astro-ph.IM"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.34817v1",
+      "score": 3
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.34910v1",
+      "title": "A comparison of two- and one-fluid dust solvers for dusty, supersonic turbulence",
+      "abstract": "We model 3 and 10 $μ$m dust grains in supersonic, turbulent molecular cloud conditions to compare two different numerical methods solving dust coupled to gas through a drag term. One method models dust and gas as two separate species (two fluid) and the other the combination of dust and gas as a single mixture (one fluid) using the diffusion approximation. Simulations are performed in a 3D periodic box using the Phantom code. The gas probability distributions are consistent with a lognormal distribution for both methods and grain sizes. The dust distributions are different in the two methods, showing discrepancies particularly in regions of low density. The most significant difference between the two methods is in the dust-to-gas ratio distributions. Both methods peak at the mean dust-to-gas ratio of 0.01, but the two-fluid method has wider distributions than the one-fluid method suggesting excess dust concentration in dense filaments. Filaments are where the one-fluid method results are most accurate. The narrowing of the one-fluid distribution is also caused by the stopping time limiter used to maintain the terminal velocity approximation. This artificially makes the mixture more coupled in low-density regions. Our overall conclusion is that both methods are viable for the study of dust in molecular clouds, but that the correct method should be chosen based on the numerical Stokes number regime of the calculation to avoid numerical artifacts.",
+      "published": "2026-11-25T18:56:18Z",
+      "authors": [
+        "Narges Vadood",
+        "Terrence S. Tricco"
+      ],
+      "cats": [
+        "astro-ph.GA",
+        "astro-ph.IM"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.34910v1",
+      "score": 1
+    },
+    {
+      "id": "http://arxiv.org/abs/2611.34838v1",
+      "title": "Screening of New Abelian Long-Range Forces",
+      "abstract": "We study how bounds on new $U(1)$ long-range forces, resulting from gauging the Standard Model symmetries $B-L$ and $L_a-L_b$, $a,b=e,μ,τ$, are modified if the mediator mass is generated by the Higgs mechanism. Large baryonic and leptonic charges of astronomical bodies displace the Higgs field from its vacuum value, resulting in charge screening. Depending on the $U(1)$ Higgs mass, the screening relaxes the bounds on the new force strength and mediator mass from equivalence principle violation and neutrino oscillations experiments, and eliminates the bounds on the muonic $L_μ-L_τ$ force from neutron star binaries.",
+      "published": "2026-11-25T18:18:06Z",
+      "authors": [
+        "Marco Costa",
+        "Andrey Shkerin",
+        "Ananda Thomlinson"
+      ],
+      "cats": [
+        "hep-ph",
+        "astro-ph.HE"
+      ],
+      "pdf": "https://arxiv.org/pdf/2611.34838v1",
+      "score": 0
+    }
+  ]
+}
